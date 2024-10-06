@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Target</title>
+</head>
+<body>
+    <h1>Select the Target Column</h1>
+    <form method="POST">
+        <label for="target_column">Select target variable (Outcome column):</label>
+        <select name="target_column">
+            {% for column in columns %}
+            <option value="{{ column }}">{{ column }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
